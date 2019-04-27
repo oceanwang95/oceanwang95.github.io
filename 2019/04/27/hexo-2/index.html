@@ -16,7 +16,7 @@
 <meta property="og:description" content="icarus个性定制配置修改的一些内容。为了防止Onedrive再把我的配置文件吞了或者还原成半年前的，把修改之处列出以绝后患。">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://img.cmwgallery.com/static/images/hexo/hexo-1.jpg">
-<meta property="og:updated_time" content="2019-04-27T14:42:00.000Z">
+<meta property="og:updated_time" content="2019-04-27T15:12:23.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo及icarus主题定制">
 <meta name="twitter:description" content="icarus个性定制配置修改的一些内容。为了防止Onedrive再把我的配置文件吞了或者还原成半年前的，把修改之处列出以绝后患。">
@@ -148,7 +148,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    2 分钟 读完 (大约 300 个字)
+                    2 分钟 读完 (大约 320 个字)
                 </span>
                 
                 
@@ -168,7 +168,8 @@
 <h2 id="CSS修改"><a href="#CSS修改" class="headerlink" title="CSS修改"></a>CSS修改</h2><p>在<code>/themes/source/css/style.styl</code>中进行修改</p>
 <h3 id="突出标题"><a href="#突出标题" class="headerlink" title="突出标题:"></a>突出标题:</h3><figure class="highlight css hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-selector-class">.title</span></span><br><span class="line">     <span class="hljs-selector-tag">border-left</span>: <span class="hljs-selector-id">#0085e2a1</span> 6<span class="hljs-selector-tag">px</span> <span class="hljs-selector-tag">solid</span></span><br><span class="line">     <span class="hljs-selector-tag">margin-left</span>: <span class="hljs-selector-tag">-1</span><span class="hljs-selector-class">.5rem</span></span><br><span class="line">     <span class="hljs-selector-tag">padding-left</span>: 1<span class="hljs-selector-tag">rem</span></span><br></pre></td></tr></table></figure>
 <h3 id="修正手机视图下标题比h1小的问题："><a href="#修正手机视图下标题比h1小的问题：" class="headerlink" title="修正手机视图下标题比h1小的问题："></a>修正手机视图下标题比h1小的问题：</h3><p>(虽然不提倡直接用!important提高优先级,不过改动只有这几处改动，应该也不会翻车。)<br><figure class="highlight css hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">@<span class="hljs-keyword">media</span> screen and (max-width: screen-tablet - <span class="hljs-number">1</span>)</span><br><span class="line">    .has-text-centered-mobile</span><br><span class="line">        text-align: center !important</span><br><span class="line">    .is-flex-center-mobile</span><br><span class="line">        justify-content: center !important</span><br><span class="line">    .has-mt-<span class="hljs-number">5</span>-mobile</span><br><span class="line">        margin-top: <span class="hljs-number">1em</span> !important</span><br><span class="line">    .content</span><br><span class="line">        h1</span><br><span class="line">            font-size: <span class="hljs-number">1.25em</span> !important</span><br><span class="line">        h2</span><br><span class="line">            font-size: <span class="hljs-number">1.2em</span> !important</span><br><span class="line">    .article</span><br><span class="line">        .title</span><br><span class="line">            font-weight: <span class="hljs-number">430</span> !important</span><br></pre></td></tr></table></figure></p>
-<p>参考<a href="https://angericky.github.io/2018/12/24/icarus%E4%B8%AA%E6%80%A7%E5%AE%9A%E5%88%B6/" target="_blank" rel="noopener">Jingjing’s Blog</a></p>
+<h3 id="修改介绍栏关于我大小"><a href="#修改介绍栏关于我大小" class="headerlink" title="修改介绍栏关于我大小:"></a>修改介绍栏关于我大小:</h3><figure class="highlight css hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-selector-class">.button</span><span class="hljs-selector-class">.is-rounded</span> </span><br><span class="line">    <span class="hljs-selector-tag">margin-left</span>: 3<span class="hljs-selector-tag">em</span></span><br><span class="line">    <span class="hljs-selector-tag">margin-right</span>: 3<span class="hljs-selector-tag">em</span></span><br></pre></td></tr></table></figure>
+<p>参考:<a href="https://angericky.github.io/2018/12/24/icarus%E4%B8%AA%E6%80%A7%E5%AE%9A%E5%88%B6/" target="_blank" rel="noopener">Jingjing’s Blog</a></p>
 
         </div>
         

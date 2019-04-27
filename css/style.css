@@ -342,6 +342,10 @@ img.thumbnail {
 .has-link-black-ter {
   color: #242424 !important;
 }
+.button.is-rounded {
+  margin-left: 3em;
+  margin-right: 3em;
+}
 @media screen and (max-width: 768px) {
   .has-text-centered-mobile {
     text-align: center !important;
