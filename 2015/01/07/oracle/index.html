@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+<title>Oracle故障排除 - Haohai&#39;s Blog</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+    <meta name="description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Oracle 11g数据库故障排除的记录本。">
+<meta name="keywords" content="Oracle,计算机">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Oracle故障排除">
+<meta property="og:url" content="https://w.cmwgallery.com/2015/01/07/oracle/index.html">
+<meta property="og:site_name" content="Haohai&#39;s Blog">
+<meta property="og:description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Oracle 11g数据库故障排除的记录本。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://img.cmwgallery.com/static/images/justtitle/oracle-title.jpg">
+<meta property="og:updated_time" content="2019-01-07T07:30:42.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Oracle故障排除">
+<meta name="twitter:description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Oracle 11g数据库故障排除的记录本。">
+<meta name="twitter:image" content="http://img.cmwgallery.com/static/images/justtitle/oracle-title.jpg">
+
+
+
+
+
+
+
+<link rel="icon" href="/images/favicon.ico">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css">
+
+
+    
+    
+    
+    <style>body>.footer,body>.navbar,body>.section{opacity:0}</style>
+    
+
+    
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css">
+    
+
+    
+    
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.css">
+
+
+    
+    
+    
+    
+
+<link rel="stylesheet" href="/css/back-to-top.css">
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+<link rel="stylesheet" href="/css/progressbar.css">
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+
+    
+
+
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="is-2-column">
+    <nav class="navbar navbar-main">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <img src="/images/logo.png" alt="Oracle故障排除" height="28">
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-start">
+                
+                <a class="navbar-item" href="/">主页</a>
+                
+                <a class="navbar-item" href="/tags/批评">批评</a>
+                
+                <a class="navbar-item" href="/tags/游记">游记</a>
+                
+                <a class="navbar-item" href="/archives">归档</a>
+                
+                <a class="navbar-item" href="/about">关于</a>
+                
+                <a class="navbar-item" href="/categories/技术">Wiki</a>
+                
+            </div>
+            
+            <div class="navbar-end">
+                
+                
+                
+                <a class="navbar-item search" title="搜索" href="javascript:;">
+                    <i class="fas fa-search"></i>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-8-tablet is-8-desktop is-8-widescreen has-order-2 column-main"><div class="card">
+    
+    <div class="card-image">
+        <span class="image is-7by1">
+            <img class="thumbnail" src="http://img.cmwgallery.com/static/images/justtitle/oracle-title.jpg" alt="Oracle故障排除">
+        </span>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2015-01-07T07:13:43.000Z">2015-01-07</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/技术/">技术</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/技术/运维/">运维</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    3 分钟 读完 (大约 412 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                Oracle故障排除
+            
+        </h1>
+        <div class="content">
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Oracle 11g数据库故障排除的记录本。<br><a id="more"></a></p>
+<h2 id="SP2-0618-Cannot-find-the-Session-Identifier"><a href="#SP2-0618-Cannot-find-the-Session-Identifier" class="headerlink" title="SP2-0618: Cannot find the Session Identifier"></a>SP2-0618: Cannot find the Session Identifier</h2><figure class="highlight sql hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SQL&gt; set autotrace on</span><br><span class="line">SP2-0618: Cannot find the Session Identifier. <span class="hljs-keyword">Check</span> PLUSTRACE <span class="hljs-keyword">role</span> <span class="hljs-keyword">is</span> enabled</span><br><span class="line">SP2<span class="hljs-number">-0611</span>: <span class="hljs-keyword">Error</span> enabling <span class="hljs-keyword">STATISTICS</span> report</span><br></pre></td></tr></table></figure>
+<p>原因是该账户没有PLUSTRACE角色查看$ORACLE_HOME/sqlplus/admin的plustrce.sql发现如下内容：</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">-- Copyright (c) Oracle Corporation 1995, 2002. All Rights Reserved.</span><br><span class="line">--</span><br><span class="line">-- NAME</span><br><span class="line">-- plustrce.sql</span><br><span class="line">--</span><br><span class="line">-- DESCRIPTION</span><br><span class="line">-- Creates a role with access to Dynamic Performance Tables</span><br><span class="line">-- for the SQL*Plus SET AUTOTRACE ... STATISTICS command.</span><br><span class="line">-- After this script has been run, each user requiring access to</span><br><span class="line">-- the AUTOTRACE feature should be granted the PLUSTRACE role by</span><br><span class="line">-- the DBA.</span><br><span class="line">--</span><br><span class="line">-- USAGE</span><br><span class="line">-- sqlplus &quot;sys/knl_test7 as sysdba&quot; @plustrce</span><br><span class="line">--</span><br><span class="line">-- Catalog.sql must have been run before this file is run.</span><br><span class="line">-- This file must be run while connected to a DBA schema.</span><br></pre></td></tr></table></figure>
+<p>以sysdba用户执行下列语句即可正常使用autotrace功能。<br> <figure class="highlight sql hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">set</span> echo <span class="hljs-keyword">on</span></span><br><span class="line"><span class="hljs-keyword">drop</span> <span class="hljs-keyword">role</span> plustrace;</span><br><span class="line"><span class="hljs-keyword">create</span> <span class="hljs-keyword">role</span> plustrace;</span><br><span class="line"><span class="hljs-keyword">grant</span> <span class="hljs-keyword">select</span> <span class="hljs-keyword">on</span> v_$sesstat <span class="hljs-keyword">to</span> plustrace;</span><br><span class="line"><span class="hljs-keyword">grant</span> <span class="hljs-keyword">select</span> <span class="hljs-keyword">on</span> v_$statname <span class="hljs-keyword">to</span> plustrace;</span><br><span class="line"><span class="hljs-keyword">grant</span> <span class="hljs-keyword">select</span> <span class="hljs-keyword">on</span> v_$mystat <span class="hljs-keyword">to</span> plustrace;</span><br><span class="line"><span class="hljs-keyword">grant</span> plustrace <span class="hljs-keyword">to</span> dba <span class="hljs-keyword">with</span> <span class="hljs-keyword">admin</span> <span class="hljs-keyword">option</span>;</span><br><span class="line"><span class="hljs-keyword">set</span> echo <span class="hljs-keyword">off</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="SQLPLUS友善化输出"><a href="#SQLPLUS友善化输出" class="headerlink" title="SQLPLUS友善化输出"></a>SQLPLUS友善化输出</h2><p><strong>set linesize 200：</strong>设置行宽，表示行宽被设置为200的字符<br><strong>column name format a40：</strong>设置列宽，设置name列为40个字符，a表示alphanumeric，字符的意思<br><strong>set pagesize 20：</strong>设置页面记录，设置每20行为一列</p>
+<p>sqlplus命令是会话级的，exit之后就消失了。setlinesize 5000 exit之后作用就消失了</p>
+<h2 id="启动em时报错：OC4J-Configuration-issue"><a href="#启动em时报错：OC4J-Configuration-issue" class="headerlink" title="启动em时报错：OC4J Configuration issue"></a>启动em时报错：OC4J Configuration issue</h2><p>修改hostname后报错：修改对应文件。<br>版本升级后</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[oracle@192~ config]$ emca -config dbcontrol db</span><br></pre></td></tr></table></figure>
+<h2 id="sqlplus方向键问题"><a href="#sqlplus方向键问题" class="headerlink" title="sqlplus方向键问题"></a>sqlplus方向键问题</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# rpm -ivh rlwrap-0.37-1.el5.i386.rpm</span><br><span class="line">[root@localhost ~]# su - grid</span><br><span class="line">[grid@localhost ~]$ vi .bash_profile </span><br><span class="line">[grid@localhost ~]$ source .bash_profile </span><br><span class="line">[grid@localhost ~]$ exit</span><br><span class="line">logout</span><br><span class="line">[root@localhost ~]# su - oracle</span><br><span class="line">[oracle@localhost ~]$ vi .bash_profile </span><br><span class="line">[oracle@localhost ~]$ source .bash_profile </span><br><span class="line">在.bash_profile 文件中加入了 alias sqlplus=&apos;rlwrap sqlplus&apos;</span><br></pre></td></tr></table></figure>
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/Oracle/">Oracle</a>, <a class="has-link-grey -link" href="/tags/计算机/">计算机</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <div class="social-share" data-disabled="tencent,linkedin,diandian,douban,google"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css">
+<script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script>
+        
+    </div>
+</div>
+
+
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2016/11/04/sunset/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">黄昏 夕阳 姑娘</span>
+            </a>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="title is-5 has-text-weight-normal">评论</h3>
+        
+<div id="lv-container" data-id="city" data-uid="MTAyMC8zMTUyMC84MDg0">
+    <script type="text/javascript">
+        (function(d, s) {
+            var j, e = d.getElementsByTagName(s)[0];
+
+            if (typeof LivereTower === 'function') { return; }
+
+            j = d.createElement(s);
+            j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+            j.async = true;
+
+            e.parentNode.insertBefore(j, e);
+        })(document, 'script');
+    </script>
+    <noscript> Please activate JavaScript for write a comment in LiveRe</noscript>
+</div>
+
+    </div>
+</div>
+</div>
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-4-widescreen  has-order-1 column-left ">
+    
+        
+    
+        
+    
+        
+
+    
+        
+    
+        
+    
+    
+        <div class="column-right-shadow  ">
+        
+            
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            最新文章
+        </h3>
+        
+        <article class="media">
+            
+            <a href="/2019/04/27/hexo-2/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="http://img.cmwgallery.com/static/images/hexo/hexo-1.jpg" alt="Hexo及icarus主题定制">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-26T16:00:00.000Z">2019-04-27</time></div>
+                    <a href="/2019/04/27/hexo-2/" class="has-link-black-ter is-size-6">Hexo及icarus主题定制</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/技术/">技术</a> / <a class="has-link-grey -link" href="/categories/技术/运维/">运维</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/04/20/hexo/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="http://img.cmwgallery.com/static/images/hexo/hexo-1.jpg" alt="Hexo Mac/Win10多平台同步">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-19T16:00:00.000Z">2019-04-20</time></div>
+                    <a href="/2019/04/20/hexo/" class="has-link-black-ter is-size-6">Hexo Mac/Win10多平台同步</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/技术/">技术</a> / <a class="has-link-grey -link" href="/categories/技术/运维/">运维</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/04/18/qingsuan/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="《清算风光摄影》系列文章">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-17T16:00:00.000Z">2019-04-18</time></div>
+                    <a href="/2019/04/18/qingsuan/" class="has-link-black-ter is-size-6">《清算风光摄影》系列文章</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/摄影/">摄影</a> / <a class="has-link-grey -link" href="/categories/摄影/文献/">文献</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/02/28/railway/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="http://img.cmwgallery.com/static/images/railway/railway-0.jpg?imageView2/2/w/1280" alt="沪宁城际及京沪高铁沪宁段车站探究(汇总)">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-02-27T16:00:00.000Z">2019-02-28</time></div>
+                    <a href="/2019/02/28/railway/" class="has-link-black-ter is-size-6">沪宁城际及京沪高铁沪宁段车站探究(汇总)</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/摄影/">摄影</a> / <a class="has-link-grey -link" href="/categories/摄影/专题/">专题</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/02/27/railway-shanghai/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="http://img.cmwgallery.com/static/images/railway-shanghai/railway-shanghai-1.jpg?imageView2/2/w/1280" alt="沪宁城际及京沪高铁沪宁段车站探究(上海篇)">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-02-26T16:00:00.000Z">2019-02-27</time></div>
+                    <a href="/2019/02/27/railway-shanghai/" class="has-link-black-ter is-size-6">沪宁城际及京沪高铁沪宁段车站探究(上海篇)</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/摄影/">摄影</a> / <a class="has-link-grey -link" href="/categories/摄影/专题/">专题</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+    </div>
+</div>
+
+        
+            <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            归档
+        </h3>
+        <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/04/">
+                <span class="level-start">
+                    <span class="level-item">四月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/02/">
+                <span class="level-start">
+                    <span class="level-item">二月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">9</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/01/">
+                <span class="level-start">
+                    <span class="level-item">一月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/12/">
+                <span class="level-start">
+                    <span class="level-item">十二月 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/10/">
+                <span class="level-start">
+                    <span class="level-item">十月 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/08/">
+                <span class="level-start">
+                    <span class="level-item">八月 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2017/12/">
+                <span class="level-start">
+                    <span class="level-item">十二月 2017</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2017/10/">
+                <span class="level-start">
+                    <span class="level-item">十月 2017</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2016/12/">
+                <span class="level-start">
+                    <span class="level-item">十二月 2016</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2016/11/">
+                <span class="level-start">
+                    <span class="level-item">十一月 2016</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2015/01/">
+                <span class="level-start">
+                    <span class="level-item">一月 2015</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+        
+            
+        
+        </div>
+    
+</div>
+
+                
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <p class="is-size-7">
+                &copy; 2019 CMW&nbsp;STUDIO,&nbsp;HAOHAI
+                
+                </p>
+            </div>
+            <div class="level-end">
+            
+                <div class="field has-addons is-flex-center-mobile has-mt-5-mobile is-flex-wrap is-flex-middle">
+                
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Creative Commons" href="https://creativecommons.org/">
+                        
+                        <i class="fab fa-creative-commons"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/">
+                        
+                        <i class="fab fa-creative-commons-by"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Download on GitHub" href="http://github.com/ppoffice/hexo-theme-icarus">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                </p>
+                
+                </div>
+            
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("zh-CN");</script>
+
+
+    
+    
+    
+    <script src="/js/animation.js"></script>
+    
+
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script>
+    <script src="/js/gallery.js" defer></script>
+    
+
+    
+    
+
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update
+            my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.js" defer></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        });
+    });
+</script>
+
+
+    
+    
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    MathJax.Hub.Config({
+        'HTML-CSS': {
+            matchFontHeight: false
+        },
+        SVG: {
+            matchFontHeight: false
+        },
+        CommonHTML: {
+            matchFontHeight: false
+        },
+        tex2jax: {
+            inlineMath: [
+                ['$','$'],
+                ['\\(','\\)']
+            ]
+        }
+    });
+});
+</script>
+
+    
+    
+
+<a id="back-to-top" title="回到顶端" href="javascript:;">
+    <i class="fas fa-chevron-up"></i>
+</a>
+<script src="/js/back-to-top.js" defer></script>
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+
+
+<script src="/js/main.js" defer></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="想要查找什么...">
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: '文章',
+                PAGES: '页面',
+                CATEGORIES: '分类',
+                TAGS: '标签',
+                UNTITLED: '(无标题)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js" defer></script>
+<link rel="stylesheet" href="/css/search.css">
+<link rel="stylesheet" href="/css/insight.css">
+    
+</body>
+</html>
