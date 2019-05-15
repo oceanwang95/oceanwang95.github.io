@@ -16,7 +16,7 @@
 <meta property="og:description" content="CycleGAN是GAN在艺术创作领域应用的进一步实践。对CycleGAN进行部署和改造以实现人工智能语境下的艺术创作。">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://img.cmwgallery.com/static/images/justtitle/ai-title.jpg">
-<meta property="og:updated_time" content="2019-05-06T06:44:45.000Z">
+<meta property="og:updated_time" content="2019-05-15T08:37:46.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="利用CycleGAN进行人工智能艺术创作">
 <meta name="twitter:description" content="CycleGAN是GAN在艺术创作领域应用的进一步实践。对CycleGAN进行部署和改造以实现人工智能语境下的艺术创作。">
@@ -148,7 +148,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    2 分钟 读完 (大约 239 个字)
+                    3 分钟 读完 (大约 508 个字)
                 </span>
                 
                 
@@ -166,8 +166,11 @@
 <p>安装lua<br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ wget http://www.lua.org/ftp/lua-5.1.5.tar.gz  </span><br><span class="line">$ tar zxvf lua-5.1.5.tar.gz  </span><br><span class="line">$ cd lua-5.1.5  </span><br><span class="line">$ make linux  </span><br><span class="line">$ make install</span><br></pre></td></tr></table></figure></p>
 <p>解决安装lua时报错“致命错误：readline/readline.h：没有那个文件或目录”： <code>yum install -y readline-devel</code></p>
 <p>安装PyTorch<br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip3 install torch torchvision</span><br></pre></td></tr></table></figure></p>
-<p>执行CycleGAN<br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">python3 -m visdom.server</span><br><span class="line">python3 train.py --dataroot ./datasets/monet2photo --name maps_monet --model cycle_gan --gpu_ids -1</span><br></pre></td></tr></table></figure></p>
-<p>未完待续……</p>
+<p>执行CycleGAN<br><code>--gpu_ids -1</code>是仅使用CPU进行运算，由于没有nvidia显卡只能用CPU了，速度上会慢很多。<br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">python3 -m visdom.server</span><br><span class="line">python3 train.py --dataroot ./datasets/monet2photo --name maps_monet --model cycle_gan --gpu_ids -1</span><br></pre></td></tr></table></figure></p>
+<p><code>visdom.server</code>则是深度学习可视化的工具，在浏览器中通过访问8097端口可以观察学习进展，<code>http://localhost:8097</code><br>翻车……服务器内存太小，一会会就溢出了，部署至实验室电脑。</p>
+<h1 id="在Mac-os下部署CycleGAN环境"><a href="#在Mac-os下部署CycleGAN环境" class="headerlink" title="在Mac os下部署CycleGAN环境"></a>在Mac os下部署CycleGAN环境</h1><p>仅仅是包管理器不一样，和linux中的步骤基本上是一致的。有的时候因为网络的原因，会导致包的缺失需要再次安装。<br><code>brew install python3</code><br><code>pip3 install visdom</code><br><code>pip3 install dominate</code><br><code>pip3 install torch torchvision</code><br>解决无法import PyTorch <code>brew install libomp</code><br>执行CycleGAN的命令是同上的</p>
+<h1 id="运行环境"><a href="#运行环境" class="headerlink" title="运行环境"></a>运行环境</h1><img title="cyclegan" src="http://img.cmwgallery.com/static/images/cyclegan/cyclegan-1.jpg?imageView2/2/w/1280">
+<p>大概一天能够运行1轮，设定的学习目标是200轮。。。大概还是需要nvidia显卡进行人工智能学习了，而苹果最新的系统又封杀了cuda，简直就是自绝于深度学习大门之外。</p>
 
         </div>
         
@@ -195,6 +198,13 @@
 
 <div class="card card-transparent">
     <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/05/15/photogram/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">Photogram 物影图像：小猪佩奇</span>
+            </a>
+        </div>
         
         
         <div class="level-end">
@@ -260,6 +270,25 @@
         <h3 class="menu-label">
             最新文章
         </h3>
+        
+        <article class="media">
+            
+            <a href="/2019/05/15/photogram/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="http://img.cmwgallery.com/static/images/photogram/photogram-2.jpg" alt="Photogram 物影图像：小猪佩奇">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-14T16:00:00.000Z">2019-05-15</time></div>
+                    <a href="/2019/05/15/photogram/" class="has-link-black-ter is-size-6">Photogram 物影图像：小猪佩奇</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/摄影/">摄影</a> / <a class="has-link-grey -link" href="/categories/摄影/专题/">专题</a>
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -337,25 +366,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2019/04/18/qingsuan/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="http://img.cmwgallery.com/static/images/life-2016/landscape-25.jpg" alt="《清算风光摄影》系列文章">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-17T16:00:00.000Z">2019-04-18</time></div>
-                    <a href="/2019/04/18/qingsuan/" class="has-link-black-ter is-size-6">《清算风光摄影》系列文章</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/学术/">学术</a> / <a class="has-link-grey -link" href="/categories/学术/文献/">文献</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -374,7 +384,7 @@
                     <span class="level-item">五月 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">1</span>
+                    <span class="level-item tag">2</span>
                 </span>
             </a>
         </li>
