@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://w.cmwgallery.com/about/index.html</loc>
+    
+    <lastmod>2019-07-30T08:13:14.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://w.cmwgallery.com/2019/07/30/whitesillusion/</loc>
     
     <lastmod>2019-07-29T16:00:00.000Z</lastmod>
@@ -23,13 +30,6 @@
   </url>
   
   <url>
-    <loc>https://w.cmwgallery.com/about/index.html</loc>
-    
-    <lastmod>2019-07-28T02:11:16.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://w.cmwgallery.com/2019/07/28/northkorea-bigman/</loc>
     
     <lastmod>2019-07-27T16:00:00.000Z</lastmod>
@@ -47,6 +47,13 @@
     <loc>https://w.cmwgallery.com/2019/07/27/northkorea-human/</loc>
     
     <lastmod>2019-07-26T16:00:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://w.cmwgallery.com/2019/05/04/blockchain/</loc>
+    
+    <lastmod>2019-06-03T16:00:00.000Z</lastmod>
     
   </url>
   
