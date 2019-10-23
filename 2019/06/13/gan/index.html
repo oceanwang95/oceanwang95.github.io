@@ -2,24 +2,24 @@
 <html lang="zh">
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-<title>生成式对抗网络：人工智能时代艺术创作的新媒介 - Haohai&#39;s Blog</title>
+<title>GAN：AI时代艺术创作的新媒介 - Haohai&#39;s Blog</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-    <meta name="description" content="&amp;emsp;&amp;emsp;人工智能的时代背景下，在技术创新的驱动下诞生了新的艺术媒介，艺术媒介的革新带来了更多元的艺术创作空间。生成式对抗网络(Generative adversarial networks, GAN)是一种深度贴近艺术创作的人工智能学习模型，利用它进行艺术的先锋性实验亦越来越成为一种潮流。GAN的出现对艺术创作的传统模型与思维理念提出了巨大的挑战。">
+    <meta name="description" content="&amp;emsp;&amp;emsp;人工智能的时代背景下，在技术创新的驱动下诞生了新的艺术媒介，艺术媒介的革新带来了更多元的艺术创作空间。GAN作为深度学习模型将传统艺术创作的方式进行了自动化，利用GAN进行艺术创作的流程与摄影具有高度的相似性，是对艺术生产力的再度解放。艺术家一旦参与进GAN的构建与创作中，其与艺术作品间的关系也会发生转变。GAN应用所带来的艺术伦理的改变将会在讨论声中逐渐创立艺术的新秩序。">
 <meta name="keywords" content="人工智能,论文,GAN,生成式对抗网络">
 <meta property="og:type" content="article">
-<meta property="og:title" content="生成式对抗网络：人工智能时代艺术创作的新媒介">
+<meta property="og:title" content="GAN：AI时代艺术创作的新媒介">
 <meta property="og:url" content="https://w.cmwgallery.com/2019/06/13/gan/index.html">
 <meta property="og:site_name" content="Haohai&#39;s Blog">
-<meta property="og:description" content="&amp;emsp;&amp;emsp;人工智能的时代背景下，在技术创新的驱动下诞生了新的艺术媒介，艺术媒介的革新带来了更多元的艺术创作空间。生成式对抗网络(Generative adversarial networks, GAN)是一种深度贴近艺术创作的人工智能学习模型，利用它进行艺术的先锋性实验亦越来越成为一种潮流。GAN的出现对艺术创作的传统模型与思维理念提出了巨大的挑战。">
+<meta property="og:description" content="&amp;emsp;&amp;emsp;人工智能的时代背景下，在技术创新的驱动下诞生了新的艺术媒介，艺术媒介的革新带来了更多元的艺术创作空间。GAN作为深度学习模型将传统艺术创作的方式进行了自动化，利用GAN进行艺术创作的流程与摄影具有高度的相似性，是对艺术生产力的再度解放。艺术家一旦参与进GAN的构建与创作中，其与艺术作品间的关系也会发生转变。GAN应用所带来的艺术伦理的改变将会在讨论声中逐渐创立艺术的新秩序。">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://img.cmwgallery.com/static/images/gan/gan-4.jpg?imageView2/2/w/1280">
 <meta property="og:updated_time" content="2019-07-05T16:00:00.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="生成式对抗网络：人工智能时代艺术创作的新媒介">
-<meta name="twitter:description" content="&amp;emsp;&amp;emsp;人工智能的时代背景下，在技术创新的驱动下诞生了新的艺术媒介，艺术媒介的革新带来了更多元的艺术创作空间。生成式对抗网络(Generative adversarial networks, GAN)是一种深度贴近艺术创作的人工智能学习模型，利用它进行艺术的先锋性实验亦越来越成为一种潮流。GAN的出现对艺术创作的传统模型与思维理念提出了巨大的挑战。">
+<meta name="twitter:title" content="GAN：AI时代艺术创作的新媒介">
+<meta name="twitter:description" content="&amp;emsp;&amp;emsp;人工智能的时代背景下，在技术创新的驱动下诞生了新的艺术媒介，艺术媒介的革新带来了更多元的艺术创作空间。GAN作为深度学习模型将传统艺术创作的方式进行了自动化，利用GAN进行艺术创作的流程与摄影具有高度的相似性，是对艺术生产力的再度解放。艺术家一旦参与进GAN的构建与创作中，其与艺术作品间的关系也会发生转变。GAN应用所带来的艺术伦理的改变将会在讨论声中逐渐创立艺术的新秩序。">
 <meta name="twitter:image" content="http://img.cmwgallery.com/static/images/gan/gan-4.jpg?imageView2/2/w/1280">
 
 
@@ -88,7 +88,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.png" alt="生成式对抗网络：人工智能时代艺术创作的新媒介" height="28">
+                <img src="/images/logo.png" alt="GAN：AI时代艺术创作的新媒介" height="28">
             
             </a>
         </div>
@@ -113,6 +113,10 @@
             <div class="navbar-end">
                 
                 
+                <a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;">
+                    <i class="fas fa-list-ul"></i>
+                </a>
+                
                 
                 <a class="navbar-item search" title="搜索" href="javascript:;">
                     <i class="fas fa-search"></i>
@@ -130,7 +134,7 @@
     
     <div class="card-image">
         <span class="image is-7by1">
-            <img class="thumbnail" src="http://img.cmwgallery.com/static/images/gan/gan-4.jpg?imageView2/2/w/1280" alt="生成式对抗网络：人工智能时代艺术创作的新媒介">
+            <img class="thumbnail" src="http://img.cmwgallery.com/static/images/gan/gan-4.jpg?imageView2/2/w/1280" alt="GAN：AI时代艺术创作的新媒介">
         </span>
     </div>
     
@@ -147,7 +151,7 @@
                 
                 <div class="level-item">
                 <i class="fas fa-folder-open">&nbsp</i>
-                <a class="has-link-grey -link" href="/categories/探究/">探究</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/探究/人工智能/">人工智能</a>
+                <a class="has-link-grey -link" href="/categories/探究/">探究</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/探究/论文/">论文</a>
                 </div>
                 
                 
@@ -157,39 +161,43 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                生成式对抗网络：人工智能时代艺术创作的新媒介
+                GAN：AI时代艺术创作的新媒介
             
         </h1>
         <div class="content">
-            <p>&emsp;&emsp;人工智能的时代背景下，在技术创新的驱动下诞生了新的艺术媒介，艺术媒介的革新带来了更多元的艺术创作空间。生成式对抗网络(Generative adversarial networks, GAN)是一种深度贴近艺术创作的人工智能学习模型，利用它进行艺术的先锋性实验亦越来越成为一种潮流。GAN的出现对艺术创作的传统模型与思维理念提出了巨大的挑战。<br><a id="more"></a> </p>
-<h2 id="一、-艺术与GAN"><a href="#一、-艺术与GAN" class="headerlink" title="一、    艺术与GAN"></a>一、    艺术与GAN</h2><p>&emsp;&emsp;GAN是由Goodfellow在2014年提出的深度学习模型，其所依赖的输入源及主要研究对象是视觉影像。生成式对抗网络目前主要应用于图像领域，利用大量输入的图像信息进行对抗性学习分析并总结归纳出其内在共性实现对输入源影像的模拟仿真。GAN设计初衷并非专门应用于艺术领域，但是其应用方向和衍生的模型对艺术创作和艺术观念都产生了越来越越深远的影响，一些艺术家已经尝试在使用GAN进行艺术创作并取得了良好的社会反响。GAN所输出的视觉影像至少从形式上已经对当代艺术的伦理提出了巨大的挑战。如何去看待GAN所生成的影像，如何去了解、学习并利用GAN成为艺术创作的新媒介，是人工智能时代艺术创作不可忽视的新命题。</p>
-<h2 id="二、-艺术创意工具的演变"><a href="#二、-艺术创意工具的演变" class="headerlink" title="二、    艺术创意工具的演变"></a>二、    艺术创意工具的演变</h2><p>&emsp;&emsp;伴随着时代的发展，观念和科技的演进，艺术表达的方式是愈加多元化的。不论是雕塑、绘画、音乐还是视觉影像，从静态语言到动态影像再至计算机视觉艺术的演变都为艺术家的表达提供了越来越丰富的媒介，艺术作品所涉猎的深度与包含信息的广度也得到了前所未有的提高。<br>艺术家对创意工具的探索历程由来已久。从近代制像史的角度来看，早在15世纪，画家就开始利用暗箱进行光学描摹以获得精确的影像[1]。直到一百多年前以化学新突破为标志的摄影术的出现，获取精确影像的新媒介就此诞生。但是新的创意工具的诞生总伴随着一定的争议性，摄影术的诞生就一度被视为画家偷懒的工具，摄影作品曾长期被拒绝于艺术大门之外，得不到画家的承认。<br>&emsp;&emsp;工具的质变往往会使得艺术创作的思维也发生重大的改变，当代摄影创作在按动下快门的那一瞬间就已经完成了创作的大部分，艺术观念的表达不再依赖于创作过程中漫长的思考时间，对于镜头捕捉光线在底片上留下影像这一过程艺术家也是难以干预的。这让艺术家在艺术创作时，可以专注于理念的表达，思考的空间和时间也要从创作过程中改变至快门前和快门后。如今摄影早已证明了其艺术地位，艺术家们通过摄影往往能表达出不同于其他创作工具所表达出的观念。如今大部分艺术创作中都可以看到摄影思维的影子，摄影也成为一种强有力的工具来辅助其他类型的艺术创作，为其他艺术形式的传播提供了可靠的延展性。</p>
-<h2 id="三、-人工智能艺术创作的伦理"><a href="#三、-人工智能艺术创作的伦理" class="headerlink" title="三、    人工智能艺术创作的伦理"></a>三、    人工智能艺术创作的伦理</h2><p>&emsp;&emsp;人工智能时代的到来为艺术创作又带来了前所未有的新媒介，人们对人工智能带来新突破的担忧又随之而来：人工智能是否能够独立地创作作品？人工智能所创作的作品的艺术性与否？人工智能创作作品的归属权如何划分？这些都成为是我们今天需要面对的问题。<br>&emsp;&emsp;从计算机科学的角度来看，机器是否能够独立思考这一命题在计算机诞生之初便存在了，人工智能这一概念早由计算机科学之父艾伦·图灵所创造，并提出了关于判断机器能否思考的著名实验——图灵测试，通过图灵测试即可宣告具备人工智能。图灵测试最终的判断标准，是人工智能有没有骗过人类，或者更准确地说，就是人工智能是否已经掌握与人相似的表述方式[2]。人工智能的研究目前处于深度学习的阶段，需要大量的数据进行支持，而受益于“大数据时代”的到来让这一切成为了可能。然而与此同时，科学家们则认为真正的人工智能智慧大爆发的“奇点”尚未到来[3]，人工智能目前还处于一个比较初级的阶段，有关人工智能的理念并没有取得质的突破，更多的则是量的突破，在很长的一段时期内不必有人工智能代替艺术家的担忧，人工智能脱离艺术家进行独立创作还是一个很长远的目标。<br>&emsp;&emsp;从艺术的角度来看，正如同观念艺术、行为艺术等当代艺术概念的诞生，艺术创作是可以不依赖实体的，同样的也不应该拘泥于所使用的媒介，人工智能正如同刻刀、画笔、乐器、相机般是作为创作工具存在的，创作的作品的艺术性与否依旧在于利用这些工具的人如何去使用这些工具。就目前可见的未来而言，人工智能只能提供技术成为新工具，需要艺术家运用它创造出新技法、新作品。优秀作品的出现，一定是当时的时代有新的技术或者手段出现。达·芬奇的作品为什么这么成功？因为当时他运用了新的颜料、新的绘画技法、新的工具[4]。艺术家们可以放心大胆的利用人工智能探索艺术未来的无限可能性，而GAN则是人工智能领域与艺术深度贴合的一个模型。<br>至于创作的归属权，在机器能够通过图灵测试前，归属权依旧由创作者获得，而目前艺术家往往与科学家合作进行人工智能的艺术创作，归属权则理因由算法的缔造者和训练人工智能的艺术家们共同拥有。</p>
-<h2 id="四、-GAN：将艺术创作流程摄影化"><a href="#四、-GAN：将艺术创作流程摄影化" class="headerlink" title="四、    GAN：将艺术创作流程摄影化"></a>四、    GAN：将艺术创作流程摄影化</h2><p>&emsp;&emsp;图一反应了艺术家利用人工智能模型进行创作的过程，艺术家需要对传入人工智能模型的视觉影像进行筛选，然后再对人工智能所创造的视觉影像进行筛选，并对人工智能模型进行参数的优化。在前期和后期的筛选中已经对人工智能模型的优化的过程中，都给艺术家艺术理念的挥洒提供了广阔的空间，艺术家在面对人工智能时代的新媒介时并不是束手无策的。早期的机器学习要取得优良的效果往往对使用者提出了较高的要求，而深度学习只要在“调优参数”上努力就可以获得优异的性能。<br>&emsp;&emsp;图二则反映了艺术家利用照相机进行创作的过程，艺术家需要对拍摄物体进行前期选材，并对照相机获取的影像做后期必要的筛选与调整，并由此优化照相机设定的参数。</p>
-<img title="gan" src="http://img.cmwgallery.com/static/images/gan/gan-9.jpg?imageView2/2/w/1280">
-<p>&emsp;&emsp;由图一、图二的对比不难对比印证得出利用人工智能模型与照相机在艺术创作的流程上的高度相似性，如同摄影技巧的易上手性，在熟悉人工智能模型流程后便可专注于艺术创作之中。<br>图三即展现了艺术家利用GAN进行艺术创作的过程，GAN的核心思想来源于博弈论中的二人零和博弈。基本的 GAN 模型在结构上由一个生成器 (Generator) 和一个判别器 (Discriminator) 组成[5]。生成器可以被看作是一个图片生成模型，他的目标是生成一张真实的图片，与此同时具备一个判别器，他的目标是能够判断输出的图像是生成出来的还是真实存在的。由生成器生成的图片会由判别器学习区分生成的图片和真实的图片进而反馈给生成器进行改进生成新的图片以供再次判别，直至判别器无法判断出输出的图像究竟是生成出来的还是真实的。</p>
+            <p>&emsp;&emsp;人工智能的时代背景下，在技术创新的驱动下诞生了新的艺术媒介，艺术媒介的革新带来了更多元的艺术创作空间。GAN作为深度学习模型将传统艺术创作的方式进行了自动化，利用GAN进行艺术创作的流程与摄影具有高度的相似性，是对艺术生产力的再度解放。艺术家一旦参与进GAN的构建与创作中，其与艺术作品间的关系也会发生转变。GAN应用所带来的艺术伦理的改变将会在讨论声中逐渐创立艺术的新秩序。<br><a id="more"></a> </p>
+<p><strong> 关键词 </strong> 人工智能 艺术创作 生成式对抗网络 摄影 创意媒介 </p>
+<h2 id="一、-艺术与GAN"><a href="#一、-艺术与GAN" class="headerlink" title="一、    艺术与GAN"></a>一、    艺术与GAN</h2><p>&emsp;&emsp;生成式对抗网络(Generative adversarial networks, GAN)是由Goodfellow等人在2014年提出的深度学习模型[1]。基于模型的数学特性，GAN对于图像信息进行训练无需额外的监督，因此其目前主要的研究对象是视觉影像。GAN模型可以用于各个领域，初衷也并非应用于艺术创作，但是其对视觉影像的广泛研究得以在影像艺术领域率先应用。一些艺术家已经尝试使用GAN进行人工智能的艺术创作并取得了良好的社会反响，GAN还迅速以信息化优势得以大众化，红极一时的视频实时“换脸”应用程序也利用了GAN进行实现。GAN与其衍生的模型对艺术创作手法和传统艺术观念产生了越来越深刻的影响，GAN输出视觉影像的模式已经如同摄影术的出现那样对当代艺术的伦理提出了巨大的挑战。</p>
+<h2 id="二、-艺术创意工具的演变"><a href="#二、-艺术创意工具的演变" class="headerlink" title="二、    艺术创意工具的演变"></a>二、    艺术创意工具的演变</h2><p>&emsp;&emsp;在摄影诞生之前，西方主流的观点认为，艺术的目的就是忠实地模仿自然[2]，由于生产力尚未爆发式增长，艺术媒介在很长一段时间里并没有出现质的改变，艺术家们也几乎一直忠于这样的终极目的进行实践。而摄影的诞生以其无可比拟的优势打破了这一思维定势，科学技术的突破带来的艺术媒介的进阶，将传统艺术从准确描绘模仿自然的历史使命中解放出来。<br>&emsp;&emsp;艺术媒介的演进为艺术突破奠定了物质基础。艺术创作的突破性进展往往也伴随着新技术或者手段的出现。达·芬奇的作品为什么这么成功？因为当时他运用了新的颜料、新的绘画技法、新的工具[3]，由此又会诞生新的艺术观念进而再次推动艺术媒介的演进。伴随着近现代生产力的解放，艺术媒介的更迭更加迅速与多元化。于传统艺术形式而言，通过对不同维度信息的捕捉输入至计算机完成了初步的信息化，承接传统艺术创作的介质在变化，但是艺术创作的过程依旧没有突破传统维度，而GAN模型的应用会改变这一现状。</p>
+<h2 id="三、-GAN：将艺术创作流程摄影化"><a href="#三、-GAN：将艺术创作流程摄影化" class="headerlink" title="三、    GAN：将艺术创作流程摄影化"></a>三、    GAN：将艺术创作流程摄影化</h2><p>&emsp;&emsp;摄影在按动快门的一瞬间即完成了创作的大部分，艺术家对于镜头捕捉光线在底片上留下影像这一过程是难以干预的，而这样的一种颠覆性的创作过程使得摄影创作的艺术性直到如今依旧存有争议。即便如此，如今大部分的艺术创作中都可以看到摄影思维的影子，摄影也以其便捷性成为一种强有力的工具来辅助其他类型的艺术创作，为其他艺术形式的传播提供了可靠的延展。传统艺术创作对技艺精良的需求是极高的，未经历常年累月的技术训练和相对长时间的创作过程就几乎无法创作出优秀的作品，而摄影尤其是进入数码时代后的摄影几乎没有技术训练的需求，艺术观念的表达不再依赖于漫长的创作过程。</p>
+<h3 id="GAN模型与摄影模型"><a href="#GAN模型与摄影模型" class="headerlink" title="GAN模型与摄影模型"></a>GAN模型与摄影模型</h3><p>&emsp;&emsp;图一反应了艺术家利用GAN模型进行创作的过程，GAN模型会依据输入图像与输入需求进行图像输出。艺术家需要对传入人工智能模型的图像进行筛选并设置、优化参数，然后再对人工智能所创造的图像进行筛选。在整个创作过程中，艺术家或者模型使用者只需要对参数和输入输出图像进行负责，对GAN内部具体实现方式无需深入的了解。<br>图二则反映了艺术家利用摄影模型进行创作的过程，艺术家需要对拍摄场景进行前期选材，并对照相机获取的影像做后期必要的筛选与调整，并由此优化照相机设定的参数。艺术家同样不需要对相机内部的成像原理有完全充分的了解。<br><img title="gan" src="http://img.cmwgallery.com/static/images/gan/gan-1.png?imageView2/2/w/1280"></p>
+<p>&emsp;&emsp;将GAN模型与摄影模型的流程进行对比，GAN模型与摄影模型在艺术创作的流程上的一致性显而易见，传统艺术中最耗时费力的创作过程在这两个模型中都得到了大幅的缩减且不再向用户开放。</p>
+<h3 id="摄影的再现与GAN的再现"><a href="#摄影的再现与GAN的再现" class="headerlink" title="摄影的再现与GAN的再现"></a>摄影的再现与GAN的再现</h3><p>&emsp;&emsp;摄影模型与GAN模型内部的具体细节不对用户开放。摄影模型的工作主要对通过透镜后的光线进行转译，已经经历了从手工描摹到化学感应再到电子信号的多次迭代，对输入的再现目前主要由相机的制造者完成。而在摄影模型完全构建前与诞生早期，艺术家们对模型的出现功不可没。早在15世纪，画家就开始利用暗箱进行光学描摹以获得精确的影像[4]，而暗箱可以视作是摄影模型的光学部分，直到化学感应光线的底片出现后组成了完整的摄影模型，艺术家们饱含的对还原自然的终极理想的人文主义精神实质性地推动了科学技术的进步，而如今摄影模型的记录流程已经实现了全自动化，无需艺术家的介入。<br>&emsp;&emsp;GAN的艺术模型的远景理想是由人工智能无监督地学习并自我创造，用户对创作过程也无需再进行了解与介入，而GAN模型目前还处于早期的构建中，需要艺术家与大量的艺术作品参与构建，艺术家也必须要充分了解GAN内部的运作流程。</p>
+<h2 id="四、-GAN的艺术创作流程"><a href="#四、-GAN的艺术创作流程" class="headerlink" title="四、    GAN的艺术创作流程"></a>四、    GAN的艺术创作流程</h2><p>&emsp;&emsp;GAN的核心思想来源于博弈论中的二人零和博弈，图三即展现了艺术家利用GAN进行艺术创作的过程。GAN 模型的基本结构上由一个生成器 (Generator) 和一个判别器 (Discriminator) 组成[5]。生成器可以被看作是一个图片生成模型，他的目标是生成一张真实的图片，与此同时具备一个判别器，他的目标是能够判断输出的图像是生成出来的还是真实存在的。由生成器生成的图片会由判别器学习区分生成的图片和真实的图片进而反馈给生成器进行改进生成新的图片以供再次判别，直至判别器无法判断出输出的图像究竟是生成出来的还是真实的。</p>
 <img title="gan" src="http://img.cmwgallery.com/static/images/gan/gan-3.jpg?imageView2/2/w/1280">
-<center>图三 艺术家利用GAN进行艺术创作的过程</center>
+<center>图三 利用GAN进行艺术创作的过程</center>
 
-<p>&emsp;&emsp;经过大量图片的输入训练学习，利用GAN可以最终可以得到与原作相仿的作品，而相似度和风格的差异化可以通过控制输入的随机噪声的多少进行调整直至得到艺术家满意的艺术作品。利用这样的模型，艺术家可以对艺术作品进行摄影化的艺术化量产，每一个由GAN生成的图像都可以体现作者本身的意图在表达上又是完全不同的。</p>
-<h2 id="五、-GAN在艺术领域的拓展"><a href="#五、-GAN在艺术领域的拓展" class="headerlink" title="五、    GAN在艺术领域的拓展"></a>五、    GAN在艺术领域的拓展</h2><p>&emsp;&emsp;GAN模型本身是可以拓展的，基于GAN模型本身并非为艺术量身定做的这一特性以及GAN模型本身的一些缺陷，艺术家与科学家们继续提出了更契合艺术领域的GAN模型以便更实用地在艺术领域进行进一步的探索。</p>
-<h3 id="5-1-创意对抗网络（Creative-adversarial-networks-CAN"><a href="#5-1-创意对抗网络（Creative-adversarial-networks-CAN" class="headerlink" title="5.1 创意对抗网络（Creative adversarial networks, CAN)"></a>5.1 创意对抗网络（Creative adversarial networks, CAN)</h3><p>&emsp;&emsp;CAN的提出，是GAN在艺术领域的具体实践，由具备艺术史研究背景的Mazzone和计算机科学研究背景的Elgammal在2017年提出。他们指出了GAN生成的图像仅仅是生成而非创造，他们通过改进GAN的原始模式，让GAN可以从感性和认知的角度进行发展和演变，让人工智能的艺术创作能拥有自我创造的能力，并定义为CAN。在训练过程中加入了对艺术家练习早期艺术作品直到某一刻他们取得突破进展的模拟，以输出更令人意想不到更新奇的作品。在对抗的过程中，加入两种相互对抗的力量，一种是促使机器遵循输入图像所展示的艺术的美学，尽可能地减少风格的偏离，而另一种力量则在模仿已经确立的风格时最大限度地进行艺术风格的模糊与偏离。利用这两种对立力量的对抗确保了艺术作品的新颖性的同时也保证了不会偏离可接受的审美标准。在马丁代尔的理论中，这被称为“最小努力”原则，这在艺术创作中是至关重要的，因为过多的新奇会导致观看者对艺术内容的无法理解[6]。</p>
-<center><img title="gan" src="http://img.cmwgallery.com/static/images/gan/gan-4.jpg?imageView2/2/w/1280"></center><br><center>图四 艺术家利用CAN进行艺术创作的过程</center>
+<p>&emsp;&emsp;经过大量图片的输入训练学习，利用GAN可以最终可以得到与原作相仿的作品，而相似度和风格的差异化可以通过参数调整来优化结果，随机噪声的引入则可以让生成结果更具备多样性。利用这样的模型，艺术家可以对艺术作品进行摄影化的艺术化量产，每一个由GAN生成的图像都可以体现作者本身的意图在表达上又是完全不同的。</p>
+<h2 id="五、-GAN在艺术领域的应用"><a href="#五、-GAN在艺术领域的应用" class="headerlink" title="五、    GAN在艺术领域的应用"></a>五、    GAN在艺术领域的应用</h2><p>&emsp;&emsp;GAN的原始模型是一个原理性模型，应用于艺术创作则需要对模型进行改造。而在GAN模型提出后的短短几年内，与艺术创作的高契合度，已经涌现出了一大批有意识或无意识的艺术衍生模型。</p>
+<h3 id="GAN艺术衍生模型介绍"><a href="#GAN艺术衍生模型介绍" class="headerlink" title="GAN艺术衍生模型介绍"></a>GAN艺术衍生模型介绍</h3><h4 id="创意对抗网络（Creative-adversarial-networks-CAN"><a href="#创意对抗网络（Creative-adversarial-networks-CAN" class="headerlink" title="创意对抗网络（Creative adversarial networks, CAN)"></a>创意对抗网络（Creative adversarial networks, CAN)</h4><p>&emsp;&emsp;CAN是GAN模型在艺术领域的具体实践，由具备艺术史研究背景的Mazzone和计算机科学研究背景的Elgammal在2017年提出。作者指出了GAN模型的重心还是在生成而非创造，艺术风格的创作性突破性这一艺术发展的重要特征并没有体现出来[6]。为了解决这一问题，作者对GAN的原始模型进行改造，让其可以从感性和认知的角度进行发展和演变，让人工智能的艺术创作能拥有自我创造的能力。<br>&emsp;&emsp;在训练CAN模型过程中加入了对艺术家练习早期艺术作品直到某一刻他们取得突破进展的模拟，以输出更新奇的作品。艺术家们通过增加艺术作品与主流审美的偏理性来制造新奇，这种增加必须是适度的，过多的新奇则会造成负面效应。在马丁代尔的理论中，这被称为“最小努力”原则，这在艺术创作中是至关重要的，因为过多的新奇会导致观看者对艺术内容的无法理解[7]。<br>&emsp;&emsp;于是在CAN模型中，作者加入两种相互对抗的力量，一种是促使机器遵循输入图像所展示的艺术的美学，尽可能地减少风格的偏离，而另一种力量则在模仿已经确立的风格时最大限度地进行艺术风格的模糊与偏离。利用这两种对立力量的对抗确保了艺术作品的新颖性的同时也保证了不会偏离可接受的审美标准。</p>
+<center><img title="gan" src="http://img.cmwgallery.com/static/images/gan/gan-4.jpg?imageView2/2/w/1280"></center><br><center>图四 利用CAN进行艺术创作的过程</center>
 
-<p>&emsp;&emsp;艺术家在利用CAN创作时，不但需要对人工智能的流程进行优化，还要对艺术风格的分类以及艺术风格的模糊进行定义和优化以协助人工智能系统完成艺术风格上的突破。图五是由Elgammal利用CAN生成的影像，由CAN创作的图像在美国洛杉矶、迈阿密等地成功的举办了艺术展览，在展览中策展人并未提前向人们透露这些图像由人工智能所生成，但是人们并没有察觉到异样并对这些作品产生了认同，当人们知道这些作品是由人工智能生成时，都极为相似的提出了这样的作品到底是由谁创作出的疑问或感叹。同样的疑问不仅仅在考验着算法设计者和参与优化的艺术家，也是所有知道这样图像背后故事人心中的疑问。不可否认的是，人们设计了这一套算法并对输入的内容判别的标准进行了定义，但是所生成的构图、风格乃至主题在计算机未完成运算前对于人们来讲都是一无所知的，人工智能成为了创作过程的主导者并不断在人类的训练中形成自己的艺术风格。</p>
-<center><img title="gan" src="http://img.cmwgallery.com/static/images/gan/gan-5.jpg?imageView2/2/w/1280"></center><br><center>图五 由Elgammal利用CAN生成的影像[5]</center>
+<p>&emsp;&emsp;艺术家在参与CAN模型进行创作时，不但需要对参数进行优化，还要对艺术风格进行分类，对艺术风格的模糊的程度进行把控，以协助人工智能完成艺术风格上的突破。图五是由Elgammal利用CAN生成的影像，由CAN创作的图像在美国洛杉矶、迈阿密等地成功的举办了艺术展览，在展览中策展人并未提前向人们透露这些图像由人工智能所生成，但是人们并没有察觉到这样的艺术作品由人工智能模型生成。由艺术家参与定义筛选、CAN模型自主学习生成的影像至少在形式上已经可以做到与人类艺术家以传统方式制作的影像相仿。</p>
+<center><img title="gan" src="http://img.cmwgallery.com/static/images/gan/gan-5.jpg?imageView2/2/w/1280"></center><br><center>图五 利用CAN生成并展出的影像[8]</center>
 
-<h3 id="5-2-循环对抗网络-Cycle-generative-adversarial-networks-CycleGAN"><a href="#5-2-循环对抗网络-Cycle-generative-adversarial-networks-CycleGAN" class="headerlink" title="5.2 循环对抗网络(Cycle generative adversarial networks, CycleGAN)"></a>5.2 循环对抗网络(Cycle generative adversarial networks, CycleGAN)</h3><p>&emsp;&emsp;CycleGAN则是GAN在艺术创作领域应用的进一步实践。由Phillip Isola等五人在2017年提出。CycleGAN则是在原理上对GAN进行了改造，传统的GAN是单向的，CycleGAN则利用了两个GAN也就是在具备两个生成器及判别器的情况下进行镜像对称构成一个环形的网络以进行非匹配成对的图像到图像的翻译，也就是在没有成对匹配的图像的情况下，通过算法进行相互数据集特征的刻画，将一个数据集的特征应用至另外一个数据集上。图六则展现了CycleGAN的艺术实践，该实践中存在一组数据集是风景照片，另一组则是莫奈的画作，通过CycleGAN对两组数据集训练，不仅可以将莫奈的作品转化为照片，同时也可以将照片转化为莫奈的风格，由于镜像结构的存在这两者是同时进行的。通过CycleGAN不仅仅可以实现画作与照片的相互转换，还可以实现例如图中斑马与马的替换，照片中季节镜像的替换。</p>
-<center><img title="gan" src="http://img.cmwgallery.com/static/images/gan/gan-6.jpg?imageView2/2/w/1280"></center><br><center>图六 通过CycleGAN进行的艺术实践[7]</center>
+<h4 id="循环对抗网络-Cycle-generative-adversarial-networks-CycleGAN"><a href="#循环对抗网络-Cycle-generative-adversarial-networks-CycleGAN" class="headerlink" title="循环对抗网络(Cycle generative adversarial networks, CycleGAN)"></a>循环对抗网络(Cycle generative adversarial networks, CycleGAN)</h4><p>&emsp;&emsp;CycleGAN则是从原理上对GAN进行了改造，由Phillip Isola等五人在2017年提出。传统的GAN是单向的，CycleGAN则利用了两个GAN也就是在具备两个生成器及判别器的情况下进行镜像对称构成一个环形的网络以进行非匹配成对的图像到图像的翻译，在没有成对匹配的图像的情况下，通过算法进行相互数据集特征的收集，将一个数据集的特征应用至另外一个数据集上。图六展现了CycleGAN对艺术品进行转译的效果，在第一组实验中，一组数据集是风景照片，另一组则是莫奈的画作，通过CycleGAN对两组数据集训练，不仅可以将莫奈的作品转化为照片，同时也可以将照片转化为莫奈的风格，由于镜像结构的存在这两者是同时进行的。通过CycleGAN不仅可以实现画作与照片这样看似实体存在相互转换，还可以实现一些在人认知模型中不存在的相互转化与生成，第二组中对斑马和马纹理的 特征替换在自然界中是不存在的，是CycleGAN在经过训练后无中生有的。</p>
+<center><img title="gan" src="http://img.cmwgallery.com/static/images/gan/gan-6.jpg?imageView2/2/w/1280"></center><br><center>图六 利用CycleGAN进行艺术风格转译[9]</center>
 
-<p>&emsp;&emsp;另外的，通过CycleGAN可以进行更广泛形式的图片翻译，比如说是从黑白照片与彩色照片相互转换、语义标签与图像的相互转换，图像的线稿与图像的相互转换，为艺术创作提供了广阔了空间，图七反映了进行图片翻译的创作实例。目前这些影像多数还是由算法编写者所生成，或只是少数艺术家参与了创作。在更多艺术家的加入下势必会打磨出更深层次的艺术作品。</p>
-<center><img title="gan" src="http://img.cmwgallery.com/static/images/gan/gan-7.jpg?imageView2/2/w/1280"></center><br><center>图七 通过CycleGAN进行的图片翻译[8]</center>
+<p>&emsp;&emsp;另外的， CycleGAN并不仅仅局限于图片的风格迁移，还可以进行更广泛形式地图片互译，以往依靠人工与少量数据难以提取出的对应关系特征，在CycleGAN的对抗性学习中得以进行总结。图七反映了利用CycleGAN进行互译的案例，从黑白照片与彩色照片相互转换、语义标签与图像的相互转换，图像的线稿与图像的相互转换，为传统艺术创作中一些耗时费力的过程提供了更好的解决方案，然而这一模型的出发点也并非针对艺术领域，艺术家的真实需求还不能完善地反映在模型中，模型的完善与优化仍需要艺术家的更多介入。</p>
+<center><img title="gan" src="http://img.cmwgallery.com/static/images/gan/gan-7.jpg?imageView2/2/w/1280"></center><br><center>利用CycleGAN进行的图片互译[10]</center>
 
-<h3 id="5-3-GAN的实验室艺术实践"><a href="#5-3-GAN的实验室艺术实践" class="headerlink" title="5.3 GAN的实验室艺术实践"></a>5.3 GAN的实验室艺术实践</h3><p>&emsp;&emsp;我们利用了爬虫从网络上收集了大量的风景照片与日本浮世绘作为数据集进行了GAN的艺术化实践。在实践中我们将风景照片与日本浮世绘的艺术作品进行风格训练的机器学习实践。<br>在实验实践中，机器学习对素材的量的需求是超乎想象的，深度学习模型需要有大量的参数，若数据样本少，则很容易“过拟合”的现象，由于样本数量少而进行过度训练，当预测训练示例结果的表现增加时，应用在未知数据的表现则变更差。[9]只有在大量的素材的提供下才能将艺术风格稳定在一定的区间内，对学习素材量的要求一般要达到数百至千张，因此对艺术家在素材整体的风格类型的宏观把控上提出了要求，艺术家若是对自身的艺术作品进行训练则对创作的数量也提出了的挑战。<br>&emsp;&emsp;去训练一个GAN模型需要耗费大量时间，我们在实验室中则花费了45天来训练上述模型，这对计算机的性能是提出了一定的要求。另外的，并不是所有生成图像都够符合我们的期待，有时甚至会出现一些意想不到的情况，这时候需要艺术家以其专业目光进行筛选并对参数进行修改与设置。<br>图八中展示了我们实验过程中的一些成功案例与失败案例，照片向画作的模拟在素材合适的情况下在较短的训练周期内便可比较好的完成，并在有意识地进行一些“无中生有”，而画作向照片的转译则比较困难，更多的是在做“从有到无”的工作。画作中的印章、题字等在现实的环境中并不存在，虽然GAN已经在有意识地将印章、题字等抹去，但由于实验中样本数量还不够多以及训练调优周期还不够长等诸多原因，处理的还不够完善。同理，一些在照片中存在的电脑字体在转译的时候也会出现不和谐的状况，印证了书法字体与电脑字体之间相互转换的桥梁在我们的GAN模型中还未搭建起来。输入的风景图片多带有蓝天整体色调偏蓝，画作纸张本身色调则是偏黄的，我们可以通过观察得出整体色调在GAN输出后也是有着明显的相互交换。由于输入的照片几乎都是风景照片，而画作中则有人物出现，在画作从人物向照片转译时就会明显感受到学习样本量的缺失，印证了在样本挑选时艺术家选择的重要性。</p>
+<h3 id="GAN的具体实践"><a href="#GAN的具体实践" class="headerlink" title="GAN的具体实践"></a>GAN的具体实践</h3><p>&emsp;&emsp;我们在实验室中利用CycleGAN的开源代码，以风景照片、日本浮世绘作为数据集进行了具体的GAN模型艺术化实践。在实验中，我们先后准备了大量的素材样本，机器学习对素材的量的需求是超乎想象的，深度学习模型需要有大量的参数，若数据样本少，则很容易“过拟合”的现象，由于样本数量少而进行过度训练，当预测训练示例结果的表现增加时，应用在未知数据的表现则变更差[11]。只有在大量的素材的提供下才能将艺术风格稳定在一定的区间内。素材量的要求数以百计起，因此对艺术家在素材整体的风格类型的宏观把控上提出了要求。<br>&emsp;&emsp;去训练一个GAN模型目前需要耗费大量的时间与精力，我们在实验室中则花费了数周时间来训练一个GAN模型。在训练过程中并不是所有生成图像都够符合我们的期待，有时甚至会出现一些意想不到的情况，这时候需要艺术家以其专业目光进行筛选并对参数进行优化。<br>&emsp;&emsp;图八中展示了实验中输出的案例，照片向画作的模拟在素材合适的情况下在较短的训练周期内便可比较好的完成，并在有意识地进行一些“无中生有”，整体风格的迁移也可以很直观的观察出来。<br>&emsp;&emsp;整体风格的迁移在两个方向的训练上都有显著的展示，输入的风景图片多带有蓝天整体色调偏蓝，画作纸张本身色调则是偏黄的，依据案例可以发现输出的图像的色温得到了准确的交换。</p>
 <center><img title="gan" src="http://img.cmwgallery.com/static/images/gan/gan-8.jpg?imageView2/2/w/1280"></center><br><center>图八 实验过程中的GAN的输入输出案例</center>
 
-<h2 id="六、-GAN与艺术的现在与未来"><a href="#六、-GAN与艺术的现在与未来" class="headerlink" title="六、    GAN与艺术的现在与未来"></a>六、    GAN与艺术的现在与未来</h2><p>&emsp;&emsp;传统的艺术创作中艺术家是与观众直接进行对话，艺术家通过作品向观众表达内心的想法。在人工智能时代，艺术家可以通过与GAN进行对话并不断训练GAN看待作品的方式并由GAN间接呈现出自己的想法，而GAN作为回报将艺术创作中人力无法总结归纳的共性点量化地呈现出来。<br>GAN是人工智能时代下的新兴产物，尚存有巨大的完善空间，但努力并非仅仅需要算法编写者的努力，更亟待的是艺术方法论的指导。诚然目前GAN的操控与改进还是有一定的学习成本的，但艺术的先锋实验是在未来艺术探索道理上的必经之路。尤其是在国内与科技相结合的艺术实验还处于萌芽阶段时，更需要我们付诸更多的努力。这是一个不断数字化的时代，也是一个不断制定新标准的时代。不论是人工智能算法本身还是有此受到越来越深刻影响的艺术创作领域都需要不断的对新的事物进行定义、解释。<br>&emsp;&emsp;基于GAN的全新创作手段以其科学性已经更宽泛的秩序感很有可能超越摄影成为一种更大众的艺术，这种艺术创作手段的普遍接受与使用还需要艺术家与算法缔造者不懈的优化迭代，将能够被大众艺术接受的成熟的创意工具直接呈现给大众，这样的GAN模型本质上已经成为了艺术家智慧的结晶，在艺术价值与观念传播上的影响力程度将是前人无法企及的。<br>&emsp;&emsp;在艺术家的观念指导及算法的不断演进下，更加完善的GAN的衍生模型或者足以让GAN改头换面人工智能新模型一定会出现。我们有理由憧憬人工智能模型给艺术带来的无限可能性。如今我们需要做的就有信心去参与并引领这样的变革，共筑人类和艺术更加美好的未来。</p>
-<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p>[1]大卫·霍克尼.隐秘的知识：重新发现西方绘画大师的失传技艺[M].浙江人民美术出版社,2018:200.<br>[2]毕丞.人类为什么不会被人工智能取代?——人工智能的技术本质研究[J].北京科技大学学报(社会科学版),2019,35(02):102-108.<br>[3]陈彦青. “AI”的边界, 艺术与设计的可能[J]. 新美术, 2018, 39(07):88-93.<br>[4]胡晓琛.数智艺术——人工智能与数字媒体艺术设计教育[J].艺术教育,2018(16):100-101.<br>[5]王坤峰, 左旺孟, 谭营, 等. 生成式对抗网络: 从生成数据到创造智能[J]. 自动化学报, 2018, 44(5): 769-774.<br>[6] Mazzone M, Elgammal A. Art, creativity, and the potential of Artificial Intelligence[C]//Arts. Multidisciplinary Digital Publishing Institute, 2019, 8(1): 26.<br>[7] Zhu J Y, Park T, Isola P, et al. Unpaired image-to-image translation using cycle-consistent adversarial networks[C]//Proceedings of the IEEE international conference on computer vision. 2017: 2223-2232.<br>[8] Isola P, Zhu J Y, Zhou T, et al. Image-to-image translation with conditional adversarial networks[C]//Proceedings of the IEEE conference on computer vision and pattern recognition. 2017: 1125-1134.<br>[9]周志华.机器学习[M].清华大学出版社,2018:23-24.</p>
+<p>&emsp;&emsp;而画作向照片的转译时则出现了细节方面的问题，画作中的印章、题字等在现实的环境中并不存在，虽然GAN已经在有意识地将印章、题字等抹去，处理的还不够完善。由于输入的照片几乎都是风景照片，而画作中则有人物出现，在画作从人物向照片转译时就会明显感受到映射关系的缺失，也印证了艺术家对样本的选择是至关重要的。<br>&emsp;&emsp;在收集的样本中，风景照片有一千余张，而画作只收集到了五百余张，画作在样本数量的缺少是本实验先天上的不足，也是传统艺术形式人工智能化的困难所在，同一作者同一风格的优秀作品的数量往往不能够达到成熟训练一个GAN模型的需求，这就需要一方面改进GAN的学习模型，另一方面要对传统艺术先进行传统手法的模仿以制作更多可供机器学习的样本。</p>
+<h2 id="六、-人工智能艺术创作的伦理"><a href="#六、-人工智能艺术创作的伦理" class="headerlink" title="六、    人工智能艺术创作的伦理"></a>六、    人工智能艺术创作的伦理</h2><p>&emsp;&emsp;正如同百年前的摄影作为新媒介的诞生，摄影术一度被视为画家偷懒的工具，摄影作品曾长期被拒绝于艺术大门之外，得不到画家的承认[12]。GAN的出现推进了人工智能在艺术领域的发展的同时一些列的担忧又随之而来。  人工智能创作的归属权该如何划分？人工智能是否能够真正的独立创作作品？人工智能是否会取代人类艺术家？这都是我们今天需要讨论的话题。<br>&emsp;&emsp;机器是否能够独立思考这一命题在计算机诞生之初便存在了，人工智能这一概念早由计算机科学之父艾伦·图灵所创造，并提出了关于判断机器能否思考的著名实验——图灵测试，通过图灵测试即可宣告具备人工智能。图灵测试最终的判断标准，是人工智能有没有骗过人类，或者更准确地说，就是人工智能是否已经掌握与人相似的表述方式[13]。目前的一些文艺美学人工智能研究成果已经十分趋近于这一目标。在重大事件的报道上，当新闻记者还没敲下键盘时，人工智能已经将完成的新闻报道在不同平台发布了，而用户却难以察觉到。当人类创作的诗词和人工智能创作的诗词同时让人类专家进行鉴别时，专家也无法完全甄别出真伪。人工智能的研究目前处于深度学习的阶段，需要大量的数据进行支持，而受益于大数据时代的到来，文学作品固有的创作模式和丰富的保有量让“骗过人类”成为了可能。<br>&emsp;&emsp;然而与此同时，科学家们则认为真正的人工智能智慧大爆发的“奇点”尚未到来[14]，人工智能目前还处于一个比较初级的阶段，有关人工智能的理念并没有取得质的突破，人工智能具备自我意识还还是一个很遥远的目标，在很长的一段时期内不必有人工智能完全取代人类艺术家的担忧。<br>&emsp;&emsp;人工智能艺术的归属权问题则要看人工智能模型演化的程度。在早期艺术家主要对模型构建负责，艺术家的传统艺术作品是人工智能模型的艺术来源，归属权自然由艺术家取得。而待模型成熟后，用户利用人工智能进行创作后则由艺术家与用户共享归属权。当人工智能有一天演化为创作过程的主导者并不断在人类的训练中形成自己的艺术风格并能独立思考创作时，那么可能就需要我们同人工智能去对话探讨归属权问题了。</p>
+<h2 id="七、-GAN与艺术的现在与未来"><a href="#七、-GAN与艺术的现在与未来" class="headerlink" title="七、    GAN与艺术的现在与未来"></a>七、    GAN与艺术的现在与未来</h2><p>&emsp;&emsp;GAN是人工智能时代下的新兴产物，尚存有巨大的完善空间，目前的GAN模型还处于构建状态，但努力并非仅仅需要算法编写者的努力，更亟待的是艺术方法论的指导，需要艺术家与艺术作品广泛地参与其中。诚然目前参与GAN的改进还是有一定的学习成本的，但艺术的先锋实验是在未来艺术探索道路上的必经之路。这是一个不断数字化的时代，也是一个不断制定新标准的时代，在我国信息化应用在其他领域领先世界的同时，艺术家们也有必要参与对未来艺术世界标准的制定。<br>&emsp;&emsp;当GAN模型构建训练完成后，艺术家的身份就会转变为用户与模型维护者，而艺术创作的主导权则交由了用户与GAN模型本身。这种角色的转换会让一些艺术家感到不适应，且对摄影式的艺术大众化、产业化的行为保持警惕。但这是一个巨大的历史机遇，没有摄影术的诞生，也就难有20世纪艺术家们在艺术观念上的突破，作为艺术与科技的研究者需要更有信心去面对未来的机遇和挑战。基于GAN模型的全新创作方式以其科学性、更优良的秩序感很有可能超越摄影成为一种更大众的艺术，而GAN模型的普遍接受与使用还需要不断地优化迭代，将能够被大众广泛接受的艺术创意工具直接呈现给大众，这样的GAN模型本质上已经成为了艺术家智慧的结晶，在艺术价值与观念传播上的影响力程度将是前人无法企及的。<br>&emsp;&emsp;在艺术家的观念指导及算法的不断演进下，更加完善的GAN衍生模型或者足以让GAN改头换面的人工智能新模型一定会在未来出现。我们有理由憧憬人工智能给艺术带来的无限可能性。艺术家需要怀抱远大的理想去参与并引领这样的变革，共筑人类和艺术更加美好的未来。</p>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p>[1] Goodfellow I, Pouget-Abadie J, Mirza M, et al. Generative adversarial nets[C]//Advances in neural information processing systems. 2014: 2672-2680.<br>[2] Thomas E. Wartenberg.什么是艺术[M].重庆大学出版社,2018:4.<br>[3] 胡晓琛.数智艺术——人工智能与数字媒体艺术设计教育[J].艺术教育,2018(16):100-101.<br>[4] 大卫·霍克尼.隐秘的知识：重新发现西方绘画大师的失传技艺[M].浙江人民美术出版社,2018:200.<br>[5] 王坤峰, 左旺孟, 谭营, 等. 生成式对抗网络: 从生成数据到创造智能[J]. 自动化学报, 2018, 44(5): 769-774.<br>[6] Mazzone M, Elgammal A. Art, creativity, and the potential of Artificial Intelligence[C]//Arts. Multidisciplinary Digital Publishing Institute, 2019, 8(1): 26.<br>[7] Martindale C. The clockwork muse: The predictability of artistic change[J]. 1992.<br>[8] 同6.<br>[9] Zhu J Y, Park T, Isola P, et al. Unpaired image-to-image translation using cycle-consistent adversarial networks[C]//Proceedings of the IEEE international conference on computer vision. 2017: 2223-2232.<br>[10] Isola P, Zhu J Y, Zhou T, et al. Image-to-image translation with conditional adversarial networks[C]//Proceedings of the IEEE conference on computer vision and pattern recognition. 2017: 1125-1134.<br>[11] 周志华.机器学习[M].清华大学出版社,2018:23-24.<br>[12] 林路.摄影思想史[M].浙江摄影出版社,2015:17.<br>[13] 毕丞.人类为什么不会被人工智能取代?——人工智能的技术本质研究[J].北京科技大学学报(社会科学版),2019,35(02):102-108.<br>[14] 陈彦青. “AI”的边界, 艺术与设计的可能[J]. 新美术, 2018, 39(07):88-93.</p>
 
         </div>
         
@@ -272,6 +280,73 @@
         
     
         
+<div class="card widget" id="toc">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                目录
+            </h3>
+            <ul class="menu-list"><li>
+        <a class="is-flex" href="#一、-艺术与GAN">
+        <span class="has-mr-6">1</span>
+        <span>一、    艺术与GAN</span>
+        </a></li><li>
+        <a class="is-flex" href="#二、-艺术创意工具的演变">
+        <span class="has-mr-6">2</span>
+        <span>二、    艺术创意工具的演变</span>
+        </a></li><li>
+        <a class="is-flex" href="#三、-GAN：将艺术创作流程摄影化">
+        <span class="has-mr-6">3</span>
+        <span>三、    GAN：将艺术创作流程摄影化</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#GAN模型与摄影模型">
+        <span class="has-mr-6">3.1</span>
+        <span>GAN模型与摄影模型</span>
+        </a></li><li>
+        <a class="is-flex" href="#摄影的再现与GAN的再现">
+        <span class="has-mr-6">3.2</span>
+        <span>摄影的再现与GAN的再现</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#四、-GAN的艺术创作流程">
+        <span class="has-mr-6">4</span>
+        <span>四、    GAN的艺术创作流程</span>
+        </a></li><li>
+        <a class="is-flex" href="#五、-GAN在艺术领域的应用">
+        <span class="has-mr-6">5</span>
+        <span>五、    GAN在艺术领域的应用</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#GAN艺术衍生模型介绍">
+        <span class="has-mr-6">5.1</span>
+        <span>GAN艺术衍生模型介绍</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#创意对抗网络（Creative-adversarial-networks-CAN">
+        <span class="has-mr-6">5.1.1</span>
+        <span>创意对抗网络（Creative adversarial networks, CAN)</span>
+        </a></li><li>
+        <a class="is-flex" href="#循环对抗网络-Cycle-generative-adversarial-networks-CycleGAN">
+        <span class="has-mr-6">5.1.2</span>
+        <span>循环对抗网络(Cycle generative adversarial networks, CycleGAN)</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#GAN的具体实践">
+        <span class="has-mr-6">5.2</span>
+        <span>GAN的具体实践</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#六、-人工智能艺术创作的伦理">
+        <span class="has-mr-6">6</span>
+        <span>六、    人工智能艺术创作的伦理</span>
+        </a></li><li>
+        <a class="is-flex" href="#七、-GAN与艺术的现在与未来">
+        <span class="has-mr-6">7</span>
+        <span>七、    GAN与艺术的现在与未来</span>
+        </a></li><li>
+        <a class="is-flex" href="#参考文献">
+        <span class="has-mr-6">8</span>
+        <span>参考文献</span>
+        </a></li></ul>
+        </div>
+    </div>
+</div>
+
     
         
 
@@ -304,6 +379,25 @@
                     <a href="/2019/09/01/brunei/" class="has-link-black-ter is-size-6">Memories in Brunei Darussalam</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/摄影/">摄影</a> / <a class="has-link-grey -link" href="/categories/摄影/游记/">游记</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/08/01/benzhi/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="http://img.cmwgallery.com/static/images/justtitle/benzhi-title.jpg?imageView2/2/w/1280" alt="从造像看照相：论摄影本质">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-07-31T16:00:00.000Z">2019-08-01</time></div>
+                    <a href="/2019/08/01/benzhi/" class="has-link-black-ter is-size-6">从造像看照相：论摄影本质</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/探究/">探究</a> / <a class="has-link-grey -link" href="/categories/探究/论文/">论文</a>
                     </p>
                 </div>
             </div>
@@ -366,25 +460,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2019/06/13/gan/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="http://img.cmwgallery.com/static/images/gan/gan-4.jpg?imageView2/2/w/1280" alt="生成式对抗网络：人工智能时代艺术创作的新媒介">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-12T16:00:00.000Z">2019-06-13</time></div>
-                    <a href="/2019/06/13/gan/" class="has-link-black-ter is-size-6">生成式对抗网络：人工智能时代艺术创作的新媒介</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/探究/">探究</a> / <a class="has-link-grey -link" href="/categories/探究/人工智能/">人工智能</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -401,6 +476,17 @@
             <a class="level is-marginless" href="/archives/2019/09/">
                 <span class="level-start">
                     <span class="level-item">九月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/08/">
+                <span class="level-start">
+                    <span class="level-item">八月 2019</span>
                 </span>
                 <span class="level-end">
                     <span class="level-item tag">1</span>
@@ -436,7 +522,7 @@
                     <span class="level-item">五月 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">4</span>
+                    <span class="level-item tag">3</span>
                 </span>
             </a>
         </li>
@@ -503,6 +589,17 @@
                 </span>
                 <span class="level-end">
                     <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/05/">
+                <span class="level-start">
+                    <span class="level-item">五月 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
                 </span>
             </a>
         </li>
