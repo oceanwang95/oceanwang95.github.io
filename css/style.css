@@ -70,6 +70,9 @@ textarea {
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
 }
+.gallery-item img {
+  vertical-align: middle;
+}
 img.thumbnail {
   object-fit: cover;
   width: 100%;
